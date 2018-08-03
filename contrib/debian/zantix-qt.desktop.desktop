@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Zantix
+Comment=Zantix P2P Cryptocurrency
+Exec=zantix-qt %u
+Terminal=false
+Type=Application
+Icon=zantix128
+MimeType=x-scheme-handler/zantix;
+Categories=Office;Finance;
+Name[en_US]=zantix-qt.desktop

@@ -1,0 +1,26 @@
+[Unit]
+Description=Zantix's distributed currency daemon
+After=network.target
+
+[Service]
+User=zantix
+Group=zantix
+
+Type=forking
+PIDFile=/var/lib/zantixd/zantixd.pid
+
+ExecStart=/usr/bin/zantixd -daemon -pid=/var/lib/zantixd/zantixd.pid \
+          -conf=/etc/zantix/zantix.conf -datadir=/var/lib/zantixd
+
+ExecStop=-/usr/bin/zantix-cli -conf=/etc/zantix/zantix.conf \
+         -datadir=/var/lib/zantixd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

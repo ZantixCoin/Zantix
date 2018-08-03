@@ -1,0 +1,26 @@
+# /etc/conf.d/zantixd: config file for /etc/init.d/zantixd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/zantix/zantix.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/zantixd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/zantixd.pid"
+
+# Where to write zantixd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/zantixd"
+
+# User and group to own zantixd process
+#BITCOIND_USER="zantix"
+#BITCOIND_GROUP="zantix"
+
+# Path to zantixd executable
+#BITCOIND_BIN="/usr/bin/zantixd"
+
+# Nice value to run zantixd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
