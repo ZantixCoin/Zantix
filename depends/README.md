@@ -22,7 +22,7 @@ Common `host-platform-triplets` for cross compilation are:
 
 - `i686-w64-mingw32` for Win32
 - `x86_64-w64-mingw32` for Win64
-- `x86_64-apple-darwin11` for MacOSX
+- `x86_64-apple-darwin14` for MacOS
 - `arm-linux-gnueabihf` for Linux ARM 32 bit
 - `aarch64-linux-gnu` for Linux ARM 64 bit
 
@@ -56,4 +56,3 @@ Additional targets:
 
 - [description.md](description.md): General description of the depends system
 - [packages.md](packages.md): Steps for adding packages
-
