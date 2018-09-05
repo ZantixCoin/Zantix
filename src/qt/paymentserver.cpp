@@ -309,7 +309,7 @@ PaymentServer::~PaymentServer()
 }
 
 //
-// OSX-specific way of handling zantix: URIs and
+// MacOS-specific way of handling zantix: URIs and
 // PaymentRequest mime types
 //
 bool PaymentServer::eventFilter(QObject* object, QEvent* event)
