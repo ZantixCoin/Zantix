@@ -129,7 +129,7 @@ public:
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
         genesis.nTime = 1536139246;
-        genesis.nBits = 0x0x1e0ffff0;
+        genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 1428561;
 
         hashGenesisBlock = genesis.GetHash();
@@ -278,7 +278,7 @@ public:
         nTargetSpacing = 2 * 60;        //  1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1536139246;
-        genesis.nBits = 0x0x1e0ffff0;
+        genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 1428561;
 
         hashGenesisBlock = genesis.GetHash();
