@@ -209,11 +209,11 @@ public:
         nMaxMoneyOut = 21000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1536139246;
-        genesis.nNonce = 1428561;
+        genesis.nTime = 1536139247;
+        genesis.nNonce = 1106625;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000007cbf25d92a0e42dc62bad585b0ddaacb7dcefb32a22dd1b54ee1057461a"));
+        assert(hashGenesisBlock == uint256("0x00000176c241f5c2363e677d9507138652a2f9743e1e801be77d4bc2667fb7a9"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -277,13 +277,13 @@ public:
         nTargetTimespan = 24 * 60 * 60; //  1 day
         nTargetSpacing = 2 * 60;        //  1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1536139246;
+        genesis.nTime = 1536139248;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 1428561;
+        genesis.nNonce = 1702991;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 24400;
-        assert(hashGenesisBlock == uint256("0x000007cbf25d92a0e42dc62bad585b0ddaacb7dcefb32a22dd1b54ee1057461a"));
+        assert(hashGenesisBlock == uint256("0x00000e183b3f02f62f53089fa83e393ed8d2cd513a8dbbc9aa82506bcfda5c09"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.
