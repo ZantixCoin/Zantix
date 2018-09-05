@@ -51,7 +51,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 35
 
 #define QAPP_ORG_NAME "Zantix"
-#define QAPP_ORG_DOMAIN "savebitcoin.io"
+#define QAPP_ORG_DOMAIN "zantix.io"
 #define QAPP_APP_NAME_DEFAULT "Zantix-Qt"
 #define QAPP_APP_NAME_TESTNET "Zantix-Qt-testnet"
 

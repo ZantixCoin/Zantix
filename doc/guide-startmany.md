@@ -137,7 +137,7 @@ I usually confirm that remote is on the correct block by issuing:
 
 ```zantixd getinfo```
 
-And compare with the official explorer at http://explorer.savebitcoin.io
+And compare with the official explorer
 
 ### Local
 
