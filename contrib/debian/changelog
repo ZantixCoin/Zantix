@@ -219,7 +219,7 @@ bitcoin (0.4.0-1) unstable; urgency=low
     + Add irc URL to Upstream-Contact.
     + Add comment on Bitcoin Developers to catch-all Files section.
     + Add Files sections for newly readded src/cryptopp/* (new custom
-      BSD-like license), and newly added doc/build-osx.txt and
+      BSD-like license), and newly added doc/build-macos.md and
       src/makefile.osx (Expat).
   * Bump debhelper compatibility level to 7.
   * Suppress binary icns and gpg files.
