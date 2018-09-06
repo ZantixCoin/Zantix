@@ -32,7 +32,7 @@
   <string>Zantix-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.savebitcoin.Zantix-Qt</string>
+  <string>Zantix-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,7 +40,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.savebitcoin.ZantixPayment</string>
+      <string>ZantixPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>zantix</string>
@@ -52,7 +52,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.savebitcoin.paymentrequest</string>
+      <string>io.zantix.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>Zantix payment request</string>
       <key>UTTypeConformsTo</key>
@@ -78,7 +78,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.savebitcoin.paymentrequest</string>
+        <string>io.zantix.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
