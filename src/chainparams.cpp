@@ -160,7 +160,7 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 0;
 
-        hashGenesisBlock = genesis.GetHash() != uint256("0x"));
+        hashGenesisBlock = genesis.GetHash() != uint256("0x");
         //hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0"));
         assert(genesis.hashMerkleRoot == uint256("0"));
