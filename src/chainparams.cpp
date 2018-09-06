@@ -54,11 +54,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000007cbf25d92a0e42dc62bad585b0ddaacb7dcefb32a22dd1b54ee1057461a"));
+    (0, uint256("0x00000920ad3b9d6dfaf1dce29298449c8222b6378bf4eaf7e63efcb7bafb5ac0"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1536139246, // * UNIX timestamp of last checkpoint block
+    1536242086, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     1        // * estimated number of transactions per day after checkpoint
@@ -69,7 +69,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1536139247,
+    1536242086,
     0,
     1};
 
@@ -128,13 +128,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1536139246;
+        genesis.nTime = 1536242086;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 1428561;
+        genesis.nNonce = 709431;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000007cbf25d92a0e42dc62bad585b0ddaacb7dcefb32a22dd1b54ee1057461a"));
-        assert(genesis.hashMerkleRoot == uint256("0xaaec8ae7314abe5cdd0a19a88c8bad47f54880a56f041529015e209e81320ec5"));
+        assert(hashGenesisBlock == uint256("0x00000920ad3b9d6dfaf1dce29298449c8222b6378bf4eaf7e63efcb7bafb5ac0"));
+        assert(genesis.hashMerkleRoot == uint256("0xd9f38c3cfadd9260a07f51ffb296555faf3dcc365fee333b3d82b2555da4d914"));
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("peer1.strangled.net", "peer1.strangled.net"));
@@ -209,11 +209,11 @@ public:
         nMaxMoneyOut = 21000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1536139247;
-        genesis.nNonce = 1106625;
+        genesis.nTime = 1536242086;
+        genesis.nNonce = 709431;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000176c241f5c2363e677d9507138652a2f9743e1e801be77d4bc2667fb7a9"));
+        assert(hashGenesisBlock == uint256("0x00000920ad3b9d6dfaf1dce29298449c8222b6378bf4eaf7e63efcb7bafb5ac0"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
