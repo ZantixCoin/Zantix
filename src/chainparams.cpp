@@ -116,6 +116,34 @@ public:
         nLastPOWBlock = 200;
         nModifierUpdateBlock = 1;
 
+        /** Generating the Genesis **/
+        void MineGenesis(CBlock genesis) {
+        if(genesis.GetHash() != uint256("0x"))
+                {
+                    printf("Looking for genesis block...\n");
+                    uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+                    while(uint256(genesis.GetHash()) > hashTarget)
+                    {
+                        ++genesis.nNonce;
+                        if (genesis.nNonce == 0)
+                        {
+                            printf("NONCE WRAPPED, incrementing time");
+                            std::cout << std::string("NONCE WRAPPED, incrementing time:\n");
+                            ++genesis.nTime;
+                        }
+                        if (genesis.nNonce % 10000 == 0)
+                        {
+                            printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
+                        }
+                    }
+                    printf("merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+                    printf("block.nTime = %u \n", genesis.nTime);
+                    printf("block.nNonce = %u \n", genesis.nNonce);
+                    printf("block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+                }
+        }
+
+        /** End generating the Genesis **/
 
         const char* pszTimestamp = "Zantix Safe 4-8-2018";
         CMutableTransaction txNew;
@@ -128,13 +156,14 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1536245481;
+        genesis.nTime = 0;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 475551;
+        genesis.nNonce = 0;
 
-        hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000004350c9ab7a2caa5f8761b23ae775ed45648e193cd3aeef7fa30776cf28c"));
-        assert(genesis.hashMerkleRoot == uint256("0xaaec8ae7314abe5cdd0a19a88c8bad47f54880a56f041529015e209e81320ec5"));
+        hashGenesisBlock = genesis.GetHash() != uint256("0x"));
+        //hashGenesisBlock = genesis.GetHash();
+        assert(hashGenesisBlock == uint256("0"));
+        assert(genesis.hashMerkleRoot == uint256("0"));
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("peer1.strangled.net", "peer1.strangled.net"));
