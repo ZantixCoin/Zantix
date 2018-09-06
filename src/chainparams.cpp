@@ -58,10 +58,10 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1514407942, // * UNIX timestamp of last checkpoint block
-    1,          // * total number of transactions between genesis and last checkpoint
+    1536139246, // * UNIX timestamp of last checkpoint block
+    0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    2        // * estimated number of transactions per day after checkpoint
+    1        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -69,17 +69,17 @@ static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1740710,
+    1536139247,
     0,
-    250};
+    1};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1454124731,
+    1536139248,
     0,
-    100};
+    1};
 
 class CMainParams : public CChainParams
 {
@@ -282,7 +282,7 @@ public:
         genesis.nNonce = 1702991;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 24400;
+        nDefaultPort = 22200;
         assert(hashGenesisBlock == uint256("0x00000e183b3f02f62f53089fa83e393ed8d2cd513a8dbbc9aa82506bcfda5c09"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
