@@ -117,7 +117,7 @@ public:
         nModifierUpdateBlock = 1;
 
         /** Generating the Genesis **/
-        void MineGenesis(CBlock genesis) {
+        //void MineGenesis(CBlock genesis) {
         if(genesis.GetHash() != uint256("0x"))
                 {
                     printf("Looking for genesis block...\n");
@@ -141,8 +141,7 @@ public:
                     printf("block.nNonce = %u \n", genesis.nNonce);
                     printf("block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
                 }
-        }
-
+        //}
         /** End generating the Genesis **/
 
         const char* pszTimestamp = "Zantix Safe 4-8-2018";
