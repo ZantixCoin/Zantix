@@ -116,7 +116,7 @@ public:
         nLastPOWBlock = 200;
         nModifierUpdateBlock = 1;
 
-        /** Generating the Genesis **/
+        /** Generating the Geness **/
         //void MineGenesis(CBlock genesis) {
         if(genesis.GetHash() != uint256("0x"))
                 {
