@@ -1,14 +1,14 @@
 /****************************************************************************************/
 /* Global color codes:                                                                  */
-/* dark-:        #e6e6e6                                                           */
+/* dark-:        #e6e6e6                                                           			*/
 /* transparent: #e9e7ef (for inactive backgrounds)                                      */
 /*                                                                                      */
-/* light-:      #44a5bb (main green for white backgrounds)                        */
-/* light-:      #e6e6e6 (sligtly darker for gradients)                            */
+/* light-:      #44a5bb (main green for white backgrounds)                        			*/
+/* light-:      #e6e6e6 (sligtly darker for gradients)                            			*/
 /*                                                                                      */
-/* medium-:     #e6e6e6 (on hover)                                                */
-/* medium-:     #bfbfbf (main grey for dark backgrounds)                         */
-/* medium-:     #8c8c8c (sligtly darker for gradients)                            */
+/* medium-:     #e6e6e6 (on hover)                                                			*/
+/* medium-:     #bfbfbf (main grey for dark backgrounds)                         				*/
+/* medium-:     #8c8c8c (sligtly darker for gradients)                            			*/
 /*                                                                                      */
 /* background:         #f8f6f6                                                          */
 /* input fields:       #e7e7e7                                                          */
@@ -72,7 +72,7 @@ QMenu::item:selected {
 }
 
 QToolBar {
-	background-color: #e6e6e6;
+	background-color: #b3b3b3;
 	border: 0px solid #fff;
 	padding: 0;
 	margin: 0;
@@ -105,7 +105,7 @@ QMessageBox {
 }
 
 QProgressBar {
-	color: #AAAAAA;
+	color: #b3b3b3;
 	border: 1px solid transparent;
 	border-radius: 50px;
 	background-color: transparent;
@@ -119,7 +119,7 @@ QProgressBar::chunk {
 
 QLabel#progressBarLabel {
 	background-color: transparent;
-	color: #e6e6e6;
+	color: #b3b3b3;
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -216,7 +216,7 @@ QLabel { /* Base Text Size & Color */
 /***************************** Global Qt Objects ***********************************************************/
 
 QPushButton { /* Global Button Style */
-	background-color: #bfbfbf;
+	background-color: #b3b3b3;
 	border-width: 1px;
 	border-style: outset;
 	border-color: #e6e6e6;
