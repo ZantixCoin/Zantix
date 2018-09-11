@@ -54,11 +54,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000004350c9ab7a2caa5f8761b23ae775ed45648e193cd3aeef7fa30776cf28c"));
+    (0, uint256("0x000000ead8aaccdd70b704358c4ac3a489ac4daaf4f62c1570f5c59921cfefcd"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1536245481, // * UNIX timestamp of last checkpoint block
+    1536653399, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     1        // * estimated number of transactions per day after checkpoint
@@ -69,7 +69,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1536245481,
+    1536643279,
     0,
     1};
 
@@ -77,7 +77,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1536139248,
+    1536643279,
     0,
     1};
 
@@ -129,12 +129,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1536653399;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 0;
+        genesis.nNonce = 1330384;
 
-        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
-        //hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0"));
-        assert(genesis.hashMerkleRoot == uint256("0"));
+        hashGenesisBlock = genesis.GetHash();
+        assert(hashGenesisBlock == uint256("0x000000ead8aaccdd70b704358c4ac3a489ac4daaf4f62c1570f5c59921cfefcd"));
+        assert(genesis.hashMerkleRoot == uint256("0xd5f02f19bd28318297e5f27e614cb32087eb0c38c24aa8fad5dc2ddb40637961"));
 
         /** Generating the Genesis **/
                  if(genesis.GetHash() != hashGenesisBlock)
