@@ -139,7 +139,7 @@ public:
         /** Generating the Genesis **/
                  if(genesis.GetHash() != hashGenesisBlock)
                  {
-                    printf("Searching for genesis block...\n");
+                    printf("Searching for mainnet genesis block...\n");
                     uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
                     uint256 thash;
           while (true)
@@ -165,7 +165,7 @@ public:
           printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
           	   }
         /** End generating the Genesis **/
-        
+
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("peer1.strangled.net", "peer1.strangled.net"));
         vSeeds.push_back(CDNSSeedData("peer2.strangled.net", "peer2.strangled.net"));
@@ -239,12 +239,41 @@ public:
         nMaxMoneyOut = 21000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1536245481;
-        genesis.nNonce = 475551;
+        genesis.nTime = 1536643279;
+        genesis.nNonce = 0;
 
-        hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("000004350c9ab7a2caa5f8761b23ae775ed45648e193cd3aeef7fa30776cf28c"));
-
+        //hashGenesisBlock = genesis.GetHash();
+        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
+//        assert(hashGenesisBlock == uint256("000004350c9ab7a2caa5f8761b23ae775ed45648e193cd3aeef7fa30776cf28c"));
+/** Generating the test Genesis **/
+         if(genesis.GetHash() != hashGenesisBlock)
+         {
+            printf("Searching for testnet genesis block...\n");
+            uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+            uint256 thash;
+  while (true)
+  {
+      thash = genesis.GetHash();
+      if (thash <= hashTarget)
+          break;
+      if ((genesis.nNonce & 0xFFF) == 0)
+      {
+          printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+      }
+      ++genesis.nNonce;
+      if (genesis.nNonce == 0)
+      {
+          printf("NONCE WRAPPED, incrementing time\n");
+          ++genesis.nTime;
+      }
+  }
+  printf("genesis.nTime = %u \n", genesis.nTime);
+  printf("genesis.nNonce = %u \n", genesis.nNonce);
+  printf("genesis.nVersion = %u \n", genesis.nVersion);
+  printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+  printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
+       }
+/** End generating the Genesis **/
         vFixedSeeds.clear();
         vSeeds.clear();
 
