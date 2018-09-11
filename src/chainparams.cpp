@@ -77,7 +77,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1536643279,
+    1536659915,
     0,
     1};
 
@@ -131,11 +131,12 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 1330384;
 
+        //hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x000000ead8aaccdd70b704358c4ac3a489ac4daaf4f62c1570f5c59921cfefcd"));
         assert(genesis.hashMerkleRoot == uint256("0xd5f02f19bd28318297e5f27e614cb32087eb0c38c24aa8fad5dc2ddb40637961"));
 
-        /** Generating the Genesis **/
+        /** Generating the mainnet Genesis **/
                  if(genesis.GetHash() != hashGenesisBlock)
                  {
                     printf("Searching for mainnet genesis block...\n");
@@ -163,7 +164,7 @@ public:
           printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
           printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
           	   }
-        /** End generating the Genesis **/
+        /** End generating the mainnet Genesis **/
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("peer1.strangled.net", "peer1.strangled.net"));
@@ -239,12 +240,13 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1536643279;
-        genesis.nNonce = 0;
+        genesis.nNonce = 2755263;
 
-        //hashGenesisBlock = genesis.GetHash();
-        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
-//        assert(hashGenesisBlock == uint256("000004350c9ab7a2caa5f8761b23ae775ed45648e193cd3aeef7fa30776cf28c"));
-/** Generating the test Genesis **/
+        hashGenesisBlock = genesis.GetHash();
+        //hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
+        assert(hashGenesisBlock == uint256("0x00000f1c0c228439c834a10e35c3a5d50d2b891d94f66a2095894b360a3e5e3b"));
+
+/** Generating the testnet Genesis **/
          if(genesis.GetHash() != hashGenesisBlock)
          {
             printf("Searching for testnet genesis block...\n");
@@ -272,7 +274,8 @@ public:
   printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
   printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
        }
-/** End generating the Genesis **/
+/** End generating the testnet Genesis **/
+
         vFixedSeeds.clear();
         vSeeds.clear();
 
@@ -335,13 +338,44 @@ public:
         nTargetTimespan = 24 * 60 * 60; //  1 day
         nTargetSpacing = 2 * 60;        //  1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1536139248;
+        genesis.nTime = 1536660002;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 1702991;
+        genesis.nNonce = 0;
 
-        hashGenesisBlock = genesis.GetHash();
+        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
+        //hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 22200;
-        assert(hashGenesisBlock == uint256("0x00000e183b3f02f62f53089fa83e393ed8d2cd513a8dbbc9aa82506bcfda5c09"));
+        //assert(hashGenesisBlock == uint256("0x"));
+
+        /** Generating the regtest Genesis **/
+                 if(genesis.GetHash() != hashGenesisBlock)
+                 {
+                    printf("Searching for regtest genesis block...\n");
+                    uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+                    uint256 thash;
+          while (true)
+          {
+              thash = genesis.GetHash();
+              if (thash <= hashTarget)
+                  break;
+              if ((genesis.nNonce & 0xFFF) == 0)
+              {
+                  printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+              }
+              ++genesis.nNonce;
+              if (genesis.nNonce == 0)
+              {
+                  printf("NONCE WRAPPED, incrementing time\n");
+                  ++genesis.nTime;
+              }
+          }
+          printf("genesis.nTime = %u \n", genesis.nTime);
+          printf("genesis.nNonce = %u \n", genesis.nNonce);
+          printf("genesis.nVersion = %u \n", genesis.nVersion);
+          printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+          printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
+               }
+        /** End generating the regtest Genesis **/
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.
