@@ -72,7 +72,7 @@ QMenu::item:selected {
 }
 
 QToolBar {
-	background-color: #;
+	background-color: #e6e6e6;
 	border: 0px solid #fff;
 	padding: 0;
 	margin: 0;
