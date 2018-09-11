@@ -61,7 +61,7 @@ static const Checkpoints::CCheckpointData data = {
     1536653399, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    1        // * estimated number of transactions per day after checkpoint
+    2000        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -71,7 +71,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1536643279,
     0,
-    1};
+    250};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
@@ -79,7 +79,7 @@ static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
     1536660002,
     0,
-    1};
+    100};
 
 class CMainParams : public CChainParams
 {
@@ -114,7 +114,7 @@ public:
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
-        nModifierUpdateBlock = 1;
+        nModifierUpdateBlock = 9999999;
 
         const char* pszTimestamp = "Zantix Safe 4-8-2018";
         CMutableTransaction txNew;
