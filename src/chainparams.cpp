@@ -77,7 +77,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1536659915,
+    1536660002,
     0,
     1};
 
@@ -340,12 +340,12 @@ public:
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1536660002;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 0;
+        genesis.nNonce = 1582322;
 
-        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
-        //hashGenesisBlock = genesis.GetHash();
+        //hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
+        hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 22200;
-        //assert(hashGenesisBlock == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x000002a6a4c0cc91a8a7f7bc2893717038db93d0eb434fc93e969d8ee47c3c49"));
 
         /** Generating the regtest Genesis **/
                  if(genesis.GetHash() != hashGenesisBlock)
