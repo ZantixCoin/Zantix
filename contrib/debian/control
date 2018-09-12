@@ -22,8 +22,8 @@ Build-Depends: debhelper,
  libqrencode-dev,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
-Vcs-Git: git://github.com/zantix/zantix.git
-Vcs-Browser: http://github.com/zantix/zantix
+Vcs-Git: git://github.com/ZantixCoin/Zantix.git
+Vcs-Browser: http://github.com/ZantixCoin/Zantix
 
 Package: zantixd
 Architecture: any

@@ -28,7 +28,7 @@ packages:
 - "python-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/zantix/zantix.git"
+- "url": "https://github.com/ZantixCoin/Zantix.git"
   "dir": "zantix"
 files:
 - "MacOSX10.11.sdk.tar.gz"

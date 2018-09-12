@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/zantix/zantix-detached-sigs.git"
+- "url": "https://github.com/ZantixCoin/Zantix-detached-sigs.git"
   "dir": "signature"
 files:
 - "zantix-osx-unsigned.tar.gz"

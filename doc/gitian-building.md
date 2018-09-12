@@ -281,7 +281,7 @@ Clone the git repositories for zantix and gitian and then checkout the zantix ve
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/zantix/zantix.git
+git clone https://github.com/ZantixCoin/Zantix.git
 cd zantix
 git checkout v${VERSION}
 cd ..
@@ -350,7 +350,7 @@ Output from `gbuild` will look something like
     remote: Total 35606 (delta 0), reused 0 (delta 0)
     Receiving objects: 100% (35606/35606), 26.52 MiB | 4.28 MiB/s, done.
     Resolving deltas: 100% (25724/25724), done.
-    From https://github.com/zantix/zantix
+    From https://github.com/ZantixCoin/Zantix
     ... (new tags, new branch etc)
     --- Building for trusty x86_64 ---
     Stopping target if it is up

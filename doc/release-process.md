@@ -186,7 +186,7 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [zantix-detached-sigs](https://github.com/zantix/zantix-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [zantix-detached-sigs](https://github.com/ZantixCoin/Zantix-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
