@@ -16,7 +16,6 @@ An energy efficient proof-of-stake algorithm is utilized, can be mined on any co
 <tr><td>Algorithm</td><td>Quark</td></tr>
 <tr><td>Max Coin Supply</td><td>21.000.000</td></tr>
 <tr><td>Premine</td><td>2.000.000</td></tr>
-<tr><td>Premine use</td><td>Presale, marketing, team, bounties and future exchanges</td></tr>
 <tr><td>Masternode collateral</td><td>10.000 ZNTX</td></tr>
 <tr><td>Block time</td><td>60 seconds</td></tr>
 <tr><td>Block reward split</td><td>85% Masternodes / 15% staking</td></tr>
