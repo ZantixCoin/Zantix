@@ -58,7 +58,7 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1536653399, // * UNIX timestamp of last checkpoint block
+    1536737244, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -69,7 +69,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1536643279,
+    1536737312,
     0,
     250};
 
@@ -77,7 +77,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1536660002,
+    1536737336,
     0,
     100};
 
@@ -127,14 +127,14 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1536653399;
+        genesis.nTime = 1536737244;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 1330384;
+        genesis.nNonce = 0;
 
-        //hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
-        hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000000ead8aaccdd70b704358c4ac3a489ac4daaf4f62c1570f5c59921cfefcd"));
-        assert(genesis.hashMerkleRoot == uint256("0xd5f02f19bd28318297e5f27e614cb32087eb0c38c24aa8fad5dc2ddb40637961"));
+        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
+        //hashGenesisBlock = genesis.GetHash();
+        //assert(hashGenesisBlock == uint256("0x000000ead8aaccdd70b704358c4ac3a489ac4daaf4f62c1570f5c59921cfefcd"));
+        //assert(genesis.hashMerkleRoot == uint256("0xd5f02f19bd28318297e5f27e614cb32087eb0c38c24aa8fad5dc2ddb40637961"));
 
         /** Generating the mainnet Genesis **/
                  if(genesis.GetHash() != hashGenesisBlock)
@@ -239,12 +239,12 @@ public:
         nMaxMoneyOut = 21000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1536643279;
-        genesis.nNonce = 2755263;
+        genesis.nTime = 1536737312;
+        genesis.nNonce = 0;
 
-        hashGenesisBlock = genesis.GetHash();
-        //hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
-        assert(hashGenesisBlock == uint256("0x00000f1c0c228439c834a10e35c3a5d50d2b891d94f66a2095894b360a3e5e3b"));
+        //hashGenesisBlock = genesis.GetHash();
+        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
+        //assert(hashGenesisBlock == uint256("0x00000f1c0c228439c834a10e35c3a5d50d2b891d94f66a2095894b360a3e5e3b"));
 
 /** Generating the testnet Genesis **/
          if(genesis.GetHash() != hashGenesisBlock)
@@ -338,14 +338,14 @@ public:
         nTargetTimespan = 24 * 60 * 60; //  1 day
         nTargetSpacing = 2 * 60;        //  1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1536660002;
+        genesis.nTime = 1536737336;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 1582322;
+        genesis.nNonce = 0;
 
-        //hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
-        hashGenesisBlock = genesis.GetHash();
+        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
+        //hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 22200;
-        assert(hashGenesisBlock == uint256("0x000002a6a4c0cc91a8a7f7bc2893717038db93d0eb434fc93e969d8ee47c3c49"));
+        //assert(hashGenesisBlock == uint256("0x000002a6a4c0cc91a8a7f7bc2893717038db93d0eb434fc93e969d8ee47c3c49"));
 
         /** Generating the regtest Genesis **/
                  if(genesis.GetHash() != hashGenesisBlock)
