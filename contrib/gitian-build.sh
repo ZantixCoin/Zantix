@@ -314,7 +314,8 @@ then
 	    ./bin/gbuild -j ${proc} -m ${mem} --commit zantix=${COMMIT} --url zantix=${url} ../zantix/contrib/gitian-descriptors/gitian-aarch64.yml
 	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-aarch64 --destination ../gitian.sigs/ ../zantix/contrib/gitian-descriptors/gitian-aarch64.yml
 	    mv build/out/zantix-*.tar.gz build/out/src/zantix-*.tar.gz ../zantix-binaries/${VERSION}
-	popd
+  fi
+  popd
 
         if [[ $commitFiles = true ]]
         then
