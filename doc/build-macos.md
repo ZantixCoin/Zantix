@@ -1,11 +1,11 @@
-Mac OS X Build Instructions and Notes
+MacOS Build Instructions and Notes
 ====================================
-This guide will show you how to build zantixd (headless client) for OSX.
+This guide will show you how to build zantixd (headless client) for MacOS
 
 Notes
 -----
 
-* Tested on OS X 10.7 Yosemite through 10.13 High Sierra on 64-bit Intel processors only.
+* Tested on MacOS from version 10.13.6 High Sierra on 64-bit Intel processors only.
 * Building with downloaded Qt binaries is not officially supported. See the notes in #7714
 * All of the commands should be executed in a Terminal application. The
 built-in one is located in `/Applications/Utilities/Terminal.app`.
@@ -74,7 +74,6 @@ Build Zantix Core
 
 Running
 -------
-
 It's now available at `./src/zantixd`
 
 Before running, it's recommended that you create an RPC configuration file.
@@ -94,6 +93,6 @@ you can monitor its process by looking at the debug.log file, like this:
 Other commands:
 -------
 
-    ./zantixd -daemon # Starts the zantix daemon.
-    ./zantix-cli --help  # Outputs a list of command-line options.
-    ./zantix-cli help    # Outputs a list of RPC commands when the daemon is running
+    ./zantixd -daemon     # Starts the zantix daemon.
+    ./zantix-cli --help   # Outputs a list of command-line options.
+    ./zantix-cli help     # Outputs a list of RPC commands when the daemon is running
