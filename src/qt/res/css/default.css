@@ -843,7 +843,7 @@ QLabel#labelOverviewHeaderRight {
 	background-repeat: no-repeat;
 }
 
-QWidget .QFrame#frame_Header { /* Header with Page-Title and PIVX-image */
+QWidget .QFrame#frame_Header { /* Header with Page-Title and Zantix-image */
 	min-width:400px;
 	background-color:#ffffff;
 }
@@ -888,7 +888,7 @@ QWidget .QFrame#frameBalances .QLabel#labelWalletStatus { /* Wallet Sync Status 
 QWidget .QFrame#frameBalances .QLabel#labelUnconfirmed, /* Pending Balance */
 QWidget .QFrame#frameBalances .QLabel#labelImmature { /* Immature Balance */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: normal;
 	color: red;
 }
@@ -918,6 +918,7 @@ QWidget .QFrame#frameBalances .QLabel#labelBalances { /* ZNTX Balances Header La
 
 QWidget .QFrame#frameBalances .QLabel#labelBalances { /* ZNTX Balances Header Label */
 	font-weight: bold;
+	font-size:20px;
 }
 
 QWidget .QFrame#frameBalances #lineBalances { /* ZNTX Balances Line separator */
