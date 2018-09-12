@@ -105,7 +105,7 @@ QMessageBox {
 }
 
 QProgressBar {
-	color: #b3b3b3;
+	color: #4d4d4d;
 	border: 1px solid transparent;
 	border-radius: 50px;
 	background-color: transparent;
@@ -113,13 +113,13 @@ QProgressBar {
 }
 
 QProgressBar::chunk {
-	background-color: #e6e6e6;
+	background-color: #FFCC00;
 	width: 20px;
 }
 
 QLabel#progressBarLabel {
 	background-color: transparent;
-	color: #b3b3b3;
+	color: #4d4d4d;
 	padding-left: 5px;
 	padding-right: 5px;
 }
