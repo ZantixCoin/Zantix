@@ -838,7 +838,7 @@ QLabel#labelOverviewHeaderLeft {
 }
 
 QLabel#labelOverviewHeaderRight {
-	qproperty-alignment: 'AlignVCenter | AlignRight';
+	qproperty-alignment: 'AlignVCenter';
 	background-image: url(':/images/zantix_logo_horizontal');
 	background-repeat: no-repeat;
 }
