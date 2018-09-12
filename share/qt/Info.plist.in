@@ -31,6 +31,12 @@
   <key>CFBundleExecutable</key>
   <string>Zantix-Qt</string>
 
+  <key>CFBundleName</key>
+  <string>Zantix-Qt</string>
+
+  <key>LSHasLocalizedDisplayName</key>
+  <true/>
+
   <key>CFBundleIdentifier</key>
   <string>Zantix-Qt</string>
 
