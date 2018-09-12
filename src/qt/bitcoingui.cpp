@@ -905,7 +905,7 @@ void BitcoinGUI::setNumConnections(int count)
     }
     QIcon connectionItem = QIcon(icon).pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE);
     labelConnectionsIcon->setIcon(connectionItem);
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Zantix network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to the Zantix network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count)
