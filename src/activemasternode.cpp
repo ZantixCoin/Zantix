@@ -425,7 +425,7 @@ bool CActiveMasternode::EnableHotColdMasterNode(CTxIn& newVin, CService& newServ
     vin = newVin;
     service = newService;
 
-    LogPrintf("CActiveMasternode::EnableHotColdMasterNode() - Enabled! You may shut down the cold daemon.\n");
+    LogPrintf("CActiveMasternode::EnableHotColdMasterNode() - Enabled!\n");
 
     return true;
 }
