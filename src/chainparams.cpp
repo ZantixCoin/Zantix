@@ -116,7 +116,7 @@ public:
         nLastPOWBlock = 200;
         nModifierUpdateBlock = 9999999;
 
-        const char* pszTimestamp = "Zantix Safe 4-8-2018";
+        const char* pszTimestamp = "Detention of Migrant Children Has Skyrocketed to Highest Levels Ever 13-8-2018";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
