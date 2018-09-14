@@ -69,7 +69,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1536737312,
+    1536737336,
     0,
     250};
 
@@ -338,7 +338,7 @@ public:
         nTargetTimespan = 24 * 60 * 60; //  1 day
         nTargetSpacing = 2 * 60;        //  1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1536737336;
+        genesis.nTime = 1536737339;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 0;
 
