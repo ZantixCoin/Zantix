@@ -239,12 +239,12 @@ public:
         nMaxMoneyOut = 21000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1536737312;
-        genesis.nNonce = 0;
+        genesis.nTime = 1536737336;
+        genesis.nNonce = 1649901;
 
-        //hashGenesisBlock = genesis.GetHash();
-        hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
-        //assert(hashGenesisBlock == uint256("0x00000f1c0c228439c834a10e35c3a5d50d2b891d94f66a2095894b360a3e5e3b"));
+        hashGenesisBlock = genesis.GetHash();
+        //hashGenesisBlock = genesis.GetHash() != hashGenesisBlock;
+        assert(hashGenesisBlock == uint256("0x000004e2306842f7f931a3174991e616c1f3e5eaa8ae8a7f658b7f38470f017d"));
 
 /** Generating the testnet Genesis **/
          if(genesis.GetHash() != hashGenesisBlock)
