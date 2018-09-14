@@ -66,12 +66,8 @@ define $(package)_config_cmds
   ./Configure $($(package)_config_opts)
 endef
 
-define $(package)_config_cmds
-  ./make depend
-endef
-
 define $(package)_build_cmds
-  $(MAKE) -j1 build_libs libcrypto.pc libssl.pc openssl.pc
+  $(MAKE) -j1 depend build_libs libcrypto.pc libssl.pc openssl.pc
 endef
 
 define $(package)_stage_cmds
