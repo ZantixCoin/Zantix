@@ -55,11 +55,11 @@ QMenuBar::item {
 }
 
 QMenuBar::item:selected {
-	background-color:#f8f6f6;
+	background-color:#b3b3b3;
 }
 
 QMenu {
-	background-color:#f8f6f6;
+	background-color:#b3b3b3;
 }
 
 QMenu::item {
@@ -79,7 +79,7 @@ QToolBar {
 }
 
 QToolBar > QToolButton {
-	background-color:#e6e6e6;
+	background-color:#b3b3b3;
 	border:0px solid #333;
 	selection-background-color:transparent;
 	min-height: 2.5em;
@@ -125,16 +125,16 @@ QLabel#progressBarLabel {
 }
 
 QTabWidget {
-	background-color:#f2f2f2;
+	background-color:#b3b3b3;
 }
 
 QTabWidget::pane {
-	background-color:#f2f2f2;
+	background-color:#b3b3b3;
 	border:1px solid #c2c2c2;
 }
 
 QTabBar {
-	background-color:#f2f2f2;
+	background-color:#b3b3b3;
 	color:#333;
 }
 
