@@ -12,20 +12,8 @@ for example, when specifying the the path of the dependency:
 Here BDB_PREFIX must absolute path - it is defined using $(pwd) which ensures
 the usage of the absolute path.
 
-To build using included depends
----------------------
-
-Compiling 64bit Linux daemon
-
-```cd depends/
-make HOST=x86_64-pc-linux-gnu
-cd ..
-./autogen.sh
-./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu --enable-static --disable-shared
-make
-```
-
-To build from system depends
+Build with Ubuntu 16.05:
+To build
 ---------------------
 
 ```bash
