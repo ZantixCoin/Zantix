@@ -105,7 +105,7 @@ QMessageBox {
 }
 
 QProgressBar {
-	color: #4d4d4d;
+	color: #4d4d4d;  /* Text left of colored progress bar color */
 	border: 1px solid transparent;
 	border-radius: 50px;
 	background-color: transparent;
@@ -113,13 +113,13 @@ QProgressBar {
 }
 
 QProgressBar::chunk {
-	background-color: #FFCC00;
+	background-color: #FFCC00; /* Moving (startup) progress bar color */
 	width: 20px;
 }
 
 QLabel#progressBarLabel {
 	background-color: transparent;
-	color: #4d4d4d;
+	color: #4d4d4d; /* Text inside moving (startup) progress bar color */
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -129,7 +129,7 @@ QTabWidget {
 }
 
 QTabWidget::pane {
-	background-color:#b3b3b3;
+	background-color:#f2f2f2; /* Background like Masternode tab */
 	border:1px solid #c2c2c2;
 }
 
@@ -387,7 +387,7 @@ QHeaderView { /* Table Header */
 
 QHeaderView::section { /* Table Header Sections */
 	qproperty-alignment:center;
-	background-color: #e6e6e6;
+	background-color: #818181;
 	color:#fff;
 	min-height:25px;
 	font-weight:bold;
@@ -931,7 +931,7 @@ QWidget .QFrame#frameBalances .QLabel#labelBalance { /* Available Balance */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	font-size: 14px;
 	font-weight: normal;
-	color: #e6e6e6;
+	color: #333333;
 }
 
 QWidget .QFrame#frameBalances .QLabel#labelWatchTotal { /* Watch-only Total Balance */
