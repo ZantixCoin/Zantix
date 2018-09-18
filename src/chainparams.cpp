@@ -169,13 +169,11 @@ public:
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("peer1.strangled.net", "peer1.strangled.net"));
         vSeeds.push_back(CDNSSeedData("peer2.strangled.net", "peer2.strangled.net"));
+        vSeeds.push_back(CDNSSeedData("peer3.strangled.net", "peer3.strangled.net"));
 
-        // Zantix addresses start with 'Z'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 81);
-        // Zantix script addresses start with '3'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6);
-        // Zantix private keys start with 'P'
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 56);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 81); /** Zantix addresses start with 'Z' **/
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6); /** Zantix script addresses start with '3' **/
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 56); /** Zantix private keys start with 'P' **/
         // Zantix BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         // Zantix BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
@@ -196,8 +194,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "04c1deb94f2b7cde72700a3fe1002f40180650aff28bde541e2105637413fb2fa7350d5f0a53d1897caee94dcdde673923c65985572904ad6356b3833a33904327";
-        strMasternodePoolDummyAddress = "ZNTX6ZW9hgLVuDkPaPzcqSGHsQhhtAComg";
+        strSporkKey = "042405114218aeb2dd230817bd896bf22e62c900a41ced7474e69d011bd4859c49f93f345d3229c9307346fcb8cdf8470620f3c6f7eb99bcee0c9a936af926da09";
+        strMasternodePoolDummyAddress = "ZUbCWZ8YZFUq958xXpc8GxAdYacQbzyDJ";
         nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis creation
 
         nBudget_Fee_Confirmations = 8; // Number of confirmations for the finalization fee
