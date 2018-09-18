@@ -888,7 +888,7 @@ QWidget .QFrame#frameBalances .QLabel#labelWalletStatus { /* Wallet Sync Status 
 QWidget .QFrame#frameBalances .QLabel#labelUnconfirmed, /* Pending Balance */
 QWidget .QFrame#frameBalances .QLabel#labelImmature { /* Immature Balance */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: normal;
 	color: red;
 }
@@ -899,7 +899,7 @@ QWidget .QFrame#frameBalances .QLabel#labelWatchAvailable, /* Watch-only Balance
 QWidget .QFrame#frameBalances .QLabel#labelWatchonly, /* Watch-only Header */
 QWidget .QFrame#frameBalances .QLabel#labelSpendable { /* Spendable Header */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
-	font-size:12px;
+	font-size:14px;
 	margin-left:16px;
 }
 
@@ -936,7 +936,7 @@ QWidget .QFrame#frameBalances .QLabel#labelBalance { /* Available Balance */
 
 QWidget .QFrame#frameBalances .QLabel#labelWatchTotal { /* Watch-only Total Balance */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
-	font-size: 12px;
+	font-size: 14px;
 	margin-left: 14px;
 }
 
