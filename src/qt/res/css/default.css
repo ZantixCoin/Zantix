@@ -31,7 +31,7 @@ WalletFrame {
 
 QPushButton:disabled{
    border:1px solid #aaaaaa;
- 	background-color:#b3b3b3bbb;
+ 	background-color:#b3b3b3;
  }
 
 QStatusBar {
@@ -387,7 +387,7 @@ QHeaderView { /* Table Header */
 
 QHeaderView::section { /* Table Header Sections */
 	qproperty-alignment:center;
-	background-color: #333333;
+	background-color: #8c8c8c;
 	color:#fff;
 	min-height:25px;
 	font-weight:bold;
@@ -429,7 +429,7 @@ QTableView::item { /* Table Item */
 
 QTableView::item:selected { /* Table Item Selected */
 	background-color:#e6e6e6;
-	color:#fff;
+	color:#333333;
 }
 
 QTableWidget { /* Table Background */
