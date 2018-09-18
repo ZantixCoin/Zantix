@@ -184,33 +184,33 @@ QLabel { /* Base Text Size & Color */
 	padding: 3px;
 	border: 0px;
 	color: #333;
-	background-color: #e6e6e6;
+	background-color: #f2f2f2;
 }
 
 .QValidatedLineEdit:!focus {
 	color: #333;
-	background-color: #e6e6e6;
+	background-color: #f2f2f2;
 }
 
 .QLineEdit:!focus {
 	color: #333;
-	background-color: #e6e6e6;
+	background-color: #f2f2f2;
 }
 
 .QTextEdit:!focus {
 	color: #333;
-	background-color: #e6e6e6;
+	background-color: #f2f2f2;
 }
 
 /* .QValidatedLineEdit:checked, .QLineEdit:checked */
 
 .QValidatedLineEdit:disabled, .QLineEdit:disabled, .QTextEdit:disabled {
 	color: #333;
-	background-color:#e6e6e6;
+	background-color:#f2f2f2;
 }
 
 .QPlainTextEdit {
-	background-color:#e6e6e6;
+	background-color:#f2f2f2;
 }
 
 /***************************** Global Qt Objects ***********************************************************/
