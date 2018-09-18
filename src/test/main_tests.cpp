@@ -11,7 +11,7 @@
 
 BOOST_AUTO_TEST_SUITE(main_tests)
 
-CAmount nMoneySupplyPoWEnd = 21000000 * COIN;
+CAmount nMoneySupplyPoWEnd = 2005000 * COIN;
 
 BOOST_AUTO_TEST_CASE(subsidy_limit_test)
 {
@@ -23,7 +23,7 @@ BOOST_AUTO_TEST_CASE(subsidy_limit_test)
         nSum += nSubsidy;
     }
 
-    BOOST_CHECK(nSum == 200000000000000ULL);
+    BOOST_CHECK(nSum == 200000000000000);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

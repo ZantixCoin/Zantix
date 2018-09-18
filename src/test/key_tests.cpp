@@ -17,17 +17,17 @@
 
 using namespace std;
 
-static const string strSecret1     ("2a6Rd6XtMKvFrjkDi6FcfSrJkpaKc382bCDadKjxPsSAHKXoZok");
-static const string strSecret2     ("2YtPcre7RfCg6TdakgACcAiFBakczN41n1D68nvseWST5eVqqxU");
-static const string strSecret1C    ("7w4wgKRKeiW4aXfm6NBWQh6dNQz57eN21vWXRKibVwc3xfUaExcT");
-static const string strSecret2C    ("7qjpqG6oMqcXZ6YTymqcEDs3bhyXrBvJRdvMfPinYYwL7HbEPDnQ");
-static const CBitcoinAddress addr1 ("GPbEQ1hJxpJkWBDKMpc4y2KkugwuUaRUTY");
-static const CBitcoinAddress addr2 ("GMLyt6XF2uyf5D154j7VW8oYGbcmvREGBm");
-static const CBitcoinAddress addr1C("GRswJtXD3dWyWpz8oXdbxWeTEvYAuXmQUx");
-static const CBitcoinAddress addr2C("GfpzbEUtk8je9RvaSMuCkScEU6fvichQLm");
+static const string strSecret1     ("2t55japnJTb19snX3Nirii54svbDRW7PhPP591C8p3zMhmwyzQ5");
+static const string strSecret2     ("2t2u6xjJ79hDwwr6edDmaHqPRTYBt24Xz87S7xKQHi86FpmsEiG");
+static const string strSecret1C    ("2t9zC45ZbtE77t3Hm4MZaHHsWFSibXsapg4jdgn6q8c5Qx2qvL8");
+static const string strSecret2C    ("2tMhjgUPJjZYeEovvZPZZs1Esw4gzznJ8XVwz3SvWXFnAYJgMq5");
+static const CBitcoinAddress addr1 ("Z5wPTc5ExMmj5RtKp3jRYLNaPznc6EswMN");
+static const CBitcoinAddress addr2 ("ZPdxSQH2zRaptUtBm4wJaanZ7e9RQWD9oc");
+static const CBitcoinAddress addr1C("Z8R4thj77BiNMN9efwkex4QcmhTw2YvBtm");
+static const CBitcoinAddress addr2C("ZP6Jn5EzUhS2atBtqtQzQn31FVb231LSxH");
 
 
-static const string strAddressBad("Xta1praZQjyELweyMByXyiREw1ZRsjXzVP");
+static const string strAddressBad("ZP6Jn5EzUhS2atBtqtQzQn31FVb231LSxV");
 
 #ifdef KEY_TESTS_DUMPINFO
 void dumpKeyInfo()
