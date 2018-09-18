@@ -50,24 +50,24 @@ QMenuBar {
 }
 
 QMenuBar::item {
-	background-color:#fff;
+	background-color:#fff; /* Windows menu */
 	color:#333;
 }
 
 QMenuBar::item:selected {
-	background-color:#fff;
+	background-color:#fff; /* Windows menu */
 }
 
 QMenu {
-	background-color:#fff;
+	background-color:#fff; /* Windows menu */
 }
 
 QMenu::item {
-	color:#333;
+	color:#333; /* Windows menu */
 }
 
 QMenu::item:selected {
-	background-color:#FFCC00;
+	background-color:#FFCC00; /* Windows active menu selection */
 	color:#333;
 }
 
@@ -1277,7 +1277,7 @@ QWidget#ReceiveCoinsDialog .QFrame#frame2 QPushButton:pressed {
 	border:1px solid #9e9e9e;
 }
 
-QWidget#ReceiveCoinsDialog .QFrame#frame .QLabel#label_6 { /* Requested Payments History Label */
+QWidget#ReceiveCoinsDialog .QFrame#frame .QLabel#label_6 { /* Receive tab, Requested paymens history letters */
 	color:#9e9e9e;
 	font-weight:bold;
 	font-size:14px;
