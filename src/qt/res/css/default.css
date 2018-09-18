@@ -55,11 +55,11 @@ QMenuBar::item {
 }
 
 QMenuBar::item:selected {
-	background-color:#b3b3b3;
+	background-color:#fff;
 }
 
 QMenu {
-	background-color:#b3b3b3;
+	background-color:#fff;
 }
 
 QMenu::item {
@@ -67,7 +67,7 @@ QMenu::item {
 }
 
 QMenu::item:selected {
-	background-color:#f2f0f0;
+	background-color:#FFCC00;
 	color:#333;
 }
 
