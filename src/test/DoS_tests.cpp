@@ -47,7 +47,7 @@ BOOST_AUTO_TEST_CASE(DoS_banning)
 {
     CNode::ClearBanned();
     CAddress addr1(ip(0xa0b0c001));
-    CNode dummyNode1(INVALID_SOCKET, addr1, "Z5wPTc5ExMmj5RtKp3jRYLNaPznc6EswMN", true);
+    CNode dummyNode1(INVALID_SOCKET, addr1, "Zu6B59NFE3562Sor6U8zyVTKh3QZFLcmeA", true);
     dummyNode1.nVersion = 1;
     Misbehaving(dummyNode1.GetId(), 100); // Should get banned
     SendMessages(&dummyNode1, false);
@@ -55,7 +55,7 @@ BOOST_AUTO_TEST_CASE(DoS_banning)
     BOOST_CHECK(!CNode::IsBanned(ip(0xa0b0c001|0x0000ff00))); // Different IP, not banned
 
     CAddress addr2(ip(0xa0b0c002));
-    CNode dummyNode2(INVALID_SOCKET, addr2, "ZPdxSQH2zRaptUtBm4wJaanZ7e9RQWD9oc", true);
+    CNode dummyNode2(INVALID_SOCKET, addr2, "Zii6T25heWbVjQvbEXcZpxZgkr7nf58iqB", true);
     dummyNode2.nVersion = 1;
     Misbehaving(dummyNode2.GetId(), 50);
     SendMessages(&dummyNode2, false);
@@ -71,7 +71,7 @@ BOOST_AUTO_TEST_CASE(DoS_banscore)
     CNode::ClearBanned();
     mapArgs["-banscore"] = "111"; // because 11 is my favorite number
     CAddress addr1(ip(0xa0b0c001));
-    CNode dummyNode1(INVALID_SOCKET, addr1, "Z5wPTc5ExMmj5RtKp3jRYLNaPznc6EswMN", true);
+    CNode dummyNode1(INVALID_SOCKET, addr1, "ZmqJCtDK7EQSHQXJdjzwYuj21kP6Q2RtPn", true);
     dummyNode1.nVersion = 1;
     Misbehaving(dummyNode1.GetId(), 100);
     SendMessages(&dummyNode1, false);
@@ -92,7 +92,7 @@ BOOST_AUTO_TEST_CASE(DoS_bantime)
     SetMockTime(nStartTime); // Overrides future calls to GetTime()
 
     CAddress addr(ip(0xa0b0c001));
-    CNode dummyNode(INVALID_SOCKET, addr, "Z8R4thj77BiNMN9efwkex4QcmhTw2YvBtm", true);
+    CNode dummyNode(INVALID_SOCKET, addr, "ZoQsjZfzKYtEfn16YTKSPTrikmqaPbaWTW", true);
     dummyNode.nVersion = 1;
 
     Misbehaving(dummyNode.GetId(), 100);
