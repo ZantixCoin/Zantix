@@ -2,24 +2,24 @@
 
 # backward compatibility for existing gentoo layout
 #
-if [ -d "/var/lib/zantix/.zantix" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/zantix/.zantix"
+if [ -d "/root/.zantix" ]; then
+	BITCOIND_DEFAULT_DATADIR="/root/.zantix/"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/zantixd"
+	BITCOIND_DEFAULT_DATADIR="/root/.zantix/"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/zantix/zantix.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/zantixd}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/root/.zantix/zantix.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/root/.zantix}
 BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/zantixd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
 BITCOIND_USER=${BITCOIND_USER:-zantix}
 BITCOIND_GROUP=${BITCOIND_GROUP:-zantix}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/zantixd}
+BITCOIND_BIN=${BITCOIND_BIN:-/root/zantix/zantixd}
 
 name="Zantix Core Daemon"
 description="Zantix crypto-currency p2p network daemon"
 
-command="/usr/bin/zantixd"
+command="/root/zantix/zantixd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \

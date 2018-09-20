@@ -35,7 +35,7 @@ generate one from the shell yourself like this:
 
 bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'
 
-Once you have a password in hand, set rpcpassword= in /etc/zantix/zantix.conf
+Once you have a password in hand, set rpcpassword= in /root/.zantix/zantix.conf
 
 For an example configuration file that describes the configuration settings,
 see contrib/debian/examples/zantix.conf.
@@ -45,11 +45,11 @@ see contrib/debian/examples/zantix.conf.
 
 All three configurations assume several paths that might need to be adjusted.
 
-Binary:              /usr/bin/zantixd
-Configuration file:  /etc/zantix/zantix.conf
-Data directory:      /var/lib/zantixd
-PID file:            /var/run/zantixd/zantixd.pid (OpenRC and Upstart)
-                     /var/lib/zantixd/zantixd.pid (systemd)
+Binary:              /root/zantix/zantixd
+Configuration file:  /root/.zantix/zantix.conf
+Data directory:      /root/.zantix/
+PID file:            /root/.zantix/zantixd.pid (OpenRC and Upstart)
+                     /root/.zantix/zantixd.pid (systemd)
 
 The configuration file, PID directory (if applicable) and data directory
 should all be owned by the zantix user and group.  It is advised for security

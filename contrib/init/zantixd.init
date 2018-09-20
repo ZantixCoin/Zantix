@@ -22,8 +22,8 @@ prog=zantixd
 # you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/zantixd
 lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/zantixd}
 
-# zantixd defaults to /usr/bin/zantixd, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/zantixd}
+# zantixd defaults to /root/zantix/zantixd, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/root/zantix/zantixd}
 
 # zantixd opts default to -disablewallet, override with BITCOIND_OPTS
 bitcoind_opts=${BITCOIND_OPTS}
