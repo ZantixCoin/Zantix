@@ -1,6 +1,6 @@
 # Zantix masternode setup
 Shell script to install a Zantix Masternode on a Linux server running Ubuntu 16.04.
-Use it on your own risk.
+Use at your own risk.
 ***
 
 ## VPS installation
