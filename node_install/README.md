@@ -12,8 +12,8 @@ bash zantix_install.sh
 
 ## Desktop wallet setup
 
-After the Masternode is up and running, you need to configure the desktop wallet accordingly. Here are the steps:
-1. Open the Zantix Desktop Wallet.
+After the Masternode is up and running, you will need to configure the desktop wallet. Follow these steps:
+1. Open the Zantix Wallet.
 2. Go to RECEIVE and create a New Address: **MN1**
 3. Send **10000** ZNTX to **MN1**. You need to send all 10000 coins in one single transaction.
 4. Wait for 20 confirmations.
@@ -49,7 +49,7 @@ zantix-cli masternode status #To check your MN status
 zantix-cli getinfo #To get general info such as Zantix version and current block number
 zantix-cli mnsync status #To check if your MN is synced.
 ```
-Also, if you want to check/start/stop **Zantix**, run one of the following commands as **root**:
+If you want to check/start/stop **Zantix**, run one of the following commands as **root**:
 
 ```
 systemctl status zantix #To check if the Zantix service is running
