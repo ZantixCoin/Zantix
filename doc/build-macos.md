@@ -1,12 +1,10 @@
 MacOS Build Instructions and Notes
 ====================================
-This guide will show you how to build zantixd (headless client) for MacOS
+This guide will show you how to build Zantix(qt) for MacOS
 
 Notes
 -----
-
-* Tested on MacOS from version 10.13.6 High Sierra on 64-bit Intel processors only.
-* Building with downloaded Qt binaries is not officially supported. See the notes in #7714
+* Tested on MacOS from version 10.13.6 High Sierra.
 * All of the commands should be executed in a Terminal application. The
 built-in one is located in `/Applications/Utilities/Terminal.app`.
 
@@ -63,18 +61,29 @@ Build Zantix Core
             ./configure
             make
 
-    3.  It is recommended to build and run the unit tests:
-
-            make check
-
-    4.  You can also create a .dmg that contains the .app bundle (optional):
+    3.  You can also create a .dmg that contains the .app bundle (optional):
 
             make deploy
 
 
+    **Note**: Optional: Build and run the unit tests: make check
+
+Disable-wallet mode
+--------------------
+When the intention is to run only a P2P node without a wallet, Bitcoin Core may be compiled in
+disable-wallet mode with:
+
+            ./configure --disable-wallet
+
+In this case there is no dependency on Berkeley DB 4.8.
+
+Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC call.
+
 Running
 -------
-It's now available at `./src/zantixd`
+Zantix executables are now available at `./src/zantixd`
+Zantix-qt is now available at `.src/qt/Zantix-qt`
+Zantix-qt.dmg is now available at `.src/Zantix-qt.dmg`
 
 Before running, it's recommended that you create an RPC configuration file.
 
@@ -84,9 +93,9 @@ commands:
     echo -e "rpcuser=zantixrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Zantix/zantix.conf"
     chmod 600 "/Users/${USER}/Library/Application Support/Zantix/zantix.conf"
 
-The next time you run it, it will start downloading the blockchain, but it won't
-output anything while it's doing this. This process may take several hours;
-you can monitor its process by looking at the debug.log file, like this:
+The first time you run zantixd, it will start downloading the blockchain. This process may take some time;
+
+You can monitor the download process by looking at the debug.log file:
 
     tail -f $HOME/Library/Application\ Support/Zantix/debug.log
 
