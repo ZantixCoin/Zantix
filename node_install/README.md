@@ -5,7 +5,7 @@ Use at your own risk.
 
 ## VPS installation
 ```
-wget -N https://raw.githubusercontent.com/ZantixCoin/Zantix/node_install/master/zantix_install.sh
+wget -N https://raw.githubusercontent.com/ZantixCoin/Zantix/blob/master/node_install/zantix_install.sh
 bash zantix_install.sh
 ```
 ***
