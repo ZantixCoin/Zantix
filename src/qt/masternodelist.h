@@ -48,6 +48,7 @@ private:
 public Q_SLOTS:
     void updateMyMasternodeInfo(QString strAlias, QString strAddr, CMasternode* pmn);
     void updateMyNodeList(bool fForce = false);
+    void updateNodeList();
 
 Q_SIGNALS:
 
