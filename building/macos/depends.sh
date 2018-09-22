@@ -16,3 +16,4 @@ brew install qt@5.5 protobuf miniupnpc openssl qrencode berkeley-db4 zlib libeve
 # Make sure our stuff is linked in our path
 brew link automake autoconf
 brew link qt@5.5 --force
+brew link boost@1.60 --force
