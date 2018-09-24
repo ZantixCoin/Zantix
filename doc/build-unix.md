@@ -257,3 +257,11 @@ To build executables for ARM:
     ./autogen.sh
     ./configure --prefix=$PWD/depends/arm-linux-gnueabihf --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++
     make
+
+ARM 64bit Cross-compilation
+-------------------
+Install the toolchain and curl:
+		sudo apt-get install g++-aarch64-linux-gnu
+		cd ..
+		./autogen.sh
+		./configure --prefix==$PWD/depends/aarch64-linux-gnu
