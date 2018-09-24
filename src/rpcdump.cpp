@@ -85,7 +85,7 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
             "importprivkey \"strprivkey\" ( \"label\" rescan )\n"
             "\nAdds a private key (as returned by dumpprivkey) to your wallet.\n"
             "\nArguments:\n"
-            "1. \"zntxprivkey\"   (string, required) The private key (see dumpprivkey)\n"
+            "1. \"ZNTX privkey\"   (string, required) The private key (see dumpprivkey)\n"
             "2. \"label\"            (string, optional, default=\"\") An optional label\n"
             "3. rescan               (boolean, optional, default=true) Rescan the wallet for transactions\n"
             "\nNote: This call can take minutes to complete if rescan is true.\n"
@@ -307,11 +307,11 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "dumpprivkey \"straddress\"\n"
-            "\nReveals the private key corresponding to 'straddress'.\n"
+            "dumpprivkey \"ZNTX address\"\n"
+            "\nReveals the private key corresponding to 'ZNTX address'.\n"
             "Then the importprivkey can be used with this output\n"
             "\nArguments:\n"
-            "1. \"straddress\"   (string, required) The str address for the private key\n"
+            "1. \"ZNTX address\"   (string, required) The ZNTX address for the private key\n"
             "\nResult:\n"
             "\"key\"                (string) The private key\n"
             "\nExamples:\n" +
@@ -395,10 +395,10 @@ UniValue bip38encrypt(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "bip38encrypt \"straddress\"\n"
-            "\nEncrypts a private key corresponding to 'straddress'.\n"
+            "bip38encrypt \"ZNTX address\"\n"
+            "\nEncrypts a private key corresponding to 'ZNTX address'.\n"
             "\nArguments:\n"
-            "1. \"straddress\"   (string, required) The str address for the private key (you must hold the key already)\n"
+            "1. \"ZNTX address\"   (string, required) The ZNTX address for the private key (you must hold the key already)\n"
             "2. \"passphrase\"   (string, required) The passphrase you want the private key to be encrypted with - Valid special chars: !#$%&'()*+,-./:;<=>?`{|}~ \n"
             "\nResult:\n"
             "\"key\"                (string) The encrypted private key\n"
@@ -433,7 +433,7 @@ UniValue bip38decrypt(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "bip38decrypt \"straddress\"\n"
+            "bip38decrypt \"ZNTX address\"\n"
             "\nDecrypts and then imports password protected private key.\n"
             "\nArguments:\n"
             "1. \"encryptedkey\"   (string, required) The encrypted private key\n"
