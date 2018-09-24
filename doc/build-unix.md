@@ -271,6 +271,7 @@ Depencies:
 To build executables for ARM 64-bit:
 
 		cd depends
+		make HOST=aarch64-linux-gnu
 		cd ..
 		./autogen.sh
 		./configure --prefix==$PWD/depends/aarch64-linux-gnu
