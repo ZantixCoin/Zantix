@@ -3163,8 +3163,9 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
 
     // Check transactions
     for (const CTransaction& tx : block.vtx)
-        if (!CheckTransaction(tx, state))
-            return error("CheckBlock() : CheckTransaction failed");
+        if (!CheckTransaction(tx, state, true))
+            return state.Invalid(false, state.GetRejectCode(), state.GetRejectReason(),
+                                 strprintf("Transaction check failed (tx hash %s) %s", tx->GetHash().ToString(), state.GetDebugMessage()));
 
     unsigned int nSigOps = 0;
     BOOST_FOREACH (const CTransaction& tx, block.vtx) {
