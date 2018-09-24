@@ -469,7 +469,7 @@ UniValue signmessage(const UniValue& params, bool fHelp)
     string strAddress = params[0].get_str();
     string strMessage = params[1].get_str();
 
-    CBitcoinAddress addr(StrAddress);
+    CBitcoinAddress addr(strAddress);
     if (!addr.IsValid())
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid address");
 
@@ -2297,7 +2297,7 @@ UniValue multisend(const UniValue& params, bool fHelp)
             walletdb.EraseMultiSend(pwalletMain->vMultiSend);
 
         std::pair<std::string, int> newMultiSend;
-        newMultiSend.first = StrAddress;
+        newMultiSend.first = strAddress;
         newMultiSend.second = nPercent;
         pwalletMain->vMultiSend.push_back(newMultiSend);
         if (fFileBacked) {
