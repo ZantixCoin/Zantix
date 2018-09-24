@@ -247,9 +247,13 @@ installing the toolchain will be different.
 Make sure you install the build requirements mentioned above.
 Then, install the toolchain and curl:
 
-    sudo apt-get install g++-arm-linux-gnueabihf curl
+Build ARM 32-bit
+-------------------
+Depencies:
 
-To build executables for ARM:
+		sudo apt-get install g++-arm-linux-gnueabihf curl
+
+To build executables for ARM 32-bit:
 
     cd depends
     make HOST=arm-linux-gnueabihf NO_QT=1
@@ -258,10 +262,16 @@ To build executables for ARM:
     ./configure --prefix=$PWD/depends/arm-linux-gnueabihf --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++
     make
 
-ARM 64bit Cross-compilation
+Build ARM 64-bit
 -------------------
-Install the toolchain and curl:
-		sudo apt-get install g++-aarch64-linux-gnu
+Depencies:
+
+		sudo apt-get install g++-aarch64-linux-gnu curl
+
+To build executables for ARM 64-bit:
+
+		cd depends
 		cd ..
 		./autogen.sh
 		./configure --prefix==$PWD/depends/aarch64-linux-gnu
+		make
