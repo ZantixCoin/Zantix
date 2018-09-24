@@ -466,10 +466,10 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 
     EnsureWalletIsUnlocked();
 
-    string ZNTX Address = params[0].get_str();
+    string strAddress = params[0].get_str();
     string strMessage = params[1].get_str();
 
-    CBitcoinAddress addr(ZNTX Address);
+    CBitcoinAddress addr(StrAddress);
     if (!addr.IsValid())
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid address");
 
@@ -760,13 +760,13 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 3 || params.size() > 6)
         throw runtime_error(
-            "sendfrom \"fromaccount\" \"tozntxaddress\" amount ( minconf \"comment\" \"comment-to\" )\n"
+            "sendfrom \"fromaccount\" \"to ZNTX address\" amount ( minconf \"comment\" \"comment-to\" )\n"
             "\nSent an amount from an account to a ZNTX address.\n"
             "The amount is a real and is rounded to the nearest 0.00000001." +
             HelpRequiringPassphrase() + "\n"
                                         "\nArguments:\n"
                                         "1. \"fromaccount\"       (string, required) The name of the account to send funds from. May be the default account using \"\".\n"
-                                        "2. \"tozntxaddress\"  (string, required) The zntx address to send funds to.\n"
+                                        "2. \"to ZNTX address\"  (string, required) The zntx address to send funds to.\n"
                                         "3. amount                (numeric, required) The amount in ZNTX. (transaction fee is added on top).\n"
                                         "4. minconf               (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
                                         "5. \"comment\"           (string, optional) A comment used to store what the transaction is for. \n"
@@ -2297,7 +2297,7 @@ UniValue multisend(const UniValue& params, bool fHelp)
             walletdb.EraseMultiSend(pwalletMain->vMultiSend);
 
         std::pair<std::string, int> newMultiSend;
-        newMultiSend.first = ZNTX Address;
+        newMultiSend.first = StrAddress;
         newMultiSend.second = nPercent;
         pwalletMain->vMultiSend.push_back(newMultiSend);
         if (fFileBacked) {
