@@ -167,6 +167,7 @@ public:
         /** End generating the mainnet Genesis **/
 
         // DNS Seeding
+        vSeeds.push_back(CDNSSeedData("seed1.strangled.net", "seed1.strangled.net"));
         vSeeds.push_back(CDNSSeedData("peer1.strangled.net", "peer1.strangled.net"));
         vSeeds.push_back(CDNSSeedData("peer2.strangled.net", "peer2.strangled.net"));
         vSeeds.push_back(CDNSSeedData("peer3.strangled.net", "peer3.strangled.net"));
