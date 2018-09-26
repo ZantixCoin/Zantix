@@ -168,8 +168,9 @@ public:
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("seed1.strangled.net", "seed1.strangled.net"));
-        vSeeds.push_back(CDNSSeedData("seed2.strangled.net", "seed2.strangled.net"));
-        vSeeds.push_back(CDNSSeedData("seed3.strangled.net", "seed3.strangled.net"));
+        vSeeds.push_back(CDNSSeedData("peer1.strangled.net", "peer2.strangled.net"));
+        vSeeds.push_back(CDNSSeedData("peer2.strangled.net", "peer2.strangled.net"));
+        vSeeds.push_back(CDNSSeedData("peer3.strangled.net", "peer3.strangled.net"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 81); /** Zantix addresses start with 'Z' **/
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6); /** Zantix script addresses start with '3' **/
