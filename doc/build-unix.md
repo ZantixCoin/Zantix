@@ -271,8 +271,7 @@ Depencies:
 To build executables for ARM 64-bit:
 
 		cd depends
-		make HOST=aarch64-linux-gnu
+		make HOST=aarch64-linux-gnu NO_QT=1
 		cd ..
 		./autogen.sh
-		./configure --prefix==$PWD/depends/aarch64-linux-gnu
-		make
+		./configure --prefix=$PWD/depends/aarch64-linux-gnu --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++
