@@ -11,7 +11,7 @@ brew uninstall qt5
 brew install boost@1.60 pkg-config automake
 
 # Install some deps
-brew install qt@5.5 protobuf miniupnpc openssl qrencode berkeley-db4 zlib libevent librsvg libtool python
+brew install qt@5.5 protobuf miniupnpc openssl qrencode berkeley-db4 zlib libevent librsvg libtool python zmq
 
 # Make sure our stuff is linked in our path
 brew link automake autoconf
